@@ -13,19 +13,18 @@ pipeline {
         AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
     }
 
-   agent any {
-   }
+   agent any
        /* options {
                 timestamps ()
                 ansiColor('xterm')
             }*/
     stages {
-        stage('checkout') {
+        stage('Checkout') {
             steps {
                  script{
                         dir("terraform")
                         {
-                            git "https://github.com/easyawslearn/Terraform-Tutorial.git"
+                            git "https://github.com/hkalsait/Terraform-Tutorial.git"
                         }
                     }
                 }
