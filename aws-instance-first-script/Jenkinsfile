@@ -14,10 +14,10 @@ pipeline {
     }
 
    agent  any
-        options {
+       /* options {
                 timestamps ()
                 ansiColor('xterm')
-            }
+            }*/
     stages {
         stage('checkout') {
             steps {
